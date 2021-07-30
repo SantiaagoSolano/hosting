@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">                                                    <!--Codificación de caracteres: UTF-8-->
+    <meta lang="es">                                                          <!--Lenguaje-->
+    <title>Asgard: Mapa Interactivo</title>                                   <!--El título de la pestaña de la página-->
+    <link href="css/estilos.css" rel="stylesheet" type="text/css">            <!--Importar los estilos CSS-->
+    <link rel="icon" href="imagenes/icono.ico">                               <!--Icono de la pestaña de la página-->
+    <meta name="viewport" content="width=device-width; initial-scale=10.0">    <!--Inicia la página llenando el espacio total que pueda mostrar el dispositivo-->
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div id="botonAumentarTamaño" title="Acercar" onclick="acercar()"></div>
+    <div id="botonDisminuirTamaño" title="Alejar" onclick="alejar()"></div>
+    <div id= "ReinoDeAsgard" class="fondo2" title="Reino de Asgard" onmouseout="estabilizar()" onmouseover="estabilizar()" ons> 
+        <div id = "bifrost" title="Bifrost"></div>   
+        <div id = "ManzanaIdunn" title="Campos de Idunn"></div>    
+        <div id = "Valhalla" title="Valhalla"></div>  
+        <div id = "Palacio" title="Palacio de Odín"></div> 
+        <div id = "Folkvangr" title="Folkvangr"></div>   
+        <div id = "Franang" title="Franang"></div>   
+    </div>

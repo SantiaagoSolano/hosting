@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">                                                    <!--Codificación de caracteres: UTF-8-->
+    <meta lang="es">                                                          <!--Lenguaje-->
+    <title>Asgard: Mapa Interactivo</title>                                   <!--El título de la pestaña de la página-->
+    <link href="css/estilos.css" rel="stylesheet" type="text/css">            <!--Importar los estilos CSS-->
+    <link rel="icon" href="imagenes/icono.ico">                               <!--Icono de la pestaña de la página-->
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">    <!--Inicia la página llenando el espacio total que pueda mostrar el dispositivo-->
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <a name="inicio"></a>                                                                       <!--Punto de control para volver al inicio de la página-->
+    <div class="fondo">                                                                         <!-- Se utiliza la esta etiqueta div para que la clase afecte a las otras etiquetas del body-->
+        <h1 class="textoPrincipal"> <a href="index.html"> ASGARD </a></h1>                      <!--Título principal de la página-->
+        <header>                                                                                <!-- el elemento header incluye el menu desplegable y el ícono que lo despliega -->
+            <input type="checkbox" id="btn-menu">                                               <!-- checkbox permite la opción boleana -->
+            <label for="btn-menu"><img src="imagenes/menu.png" width="30px"></label>            <!-- La imagen que representa al menu -->
+
+            <nav class="menu">                                                                  <!--La barra de botones y el menu desplegable-->
+                <ul>                                                                            <!-- Los botones ahora son elementos de una lista-->
+                    <li><a href="index.html" target="_self">Historia</a></li>                   <!-- Se coloca el boton que dirige a la historia del lugar-->
+                    <li><a href="Personajes.html" target="_self">Dioses</a></li>                <!--Se coloca el boton que dirige a los personajes del lugar-->
+                    <li><a href="Actividades.html" target="_self">Actividades</a></li>          <!--Se coloca el boton que dirige a las actividades del lugar-->
+                    <li><a href="Ubicación.html" target="_self">Ubicación</a></li>              <!--Se coloca el boton que dirige a la ubicación del lugar-->
+                    <li><a href="MapaInteractivo.html" target="_self">Mapa</a></li>             <!-- Se coloca el boton que dirige a la historia del lugar-->
+                    <li><a href="Referencias.html" target="_self">Referencias</a></li>          <!--Se coloca el boton que dirige a las refencias de las imagenes e información de la página-->
+                </ul>
+            </nav>
+        </header>
+        <h1>Mapas interactivos</h1>        <!--Título del tema de la página-->
+        <h3>A continuación se encuentran 2 mapas, en el primero se puede conocer la información de los 9 reinos del
+            arbol Yggdrasil y en el segundo los lugares mas importantes de Asgard.</h3>
+        <h2 class="subtitulo">Los 9 reinos nordicos</h2>        
+        <div class="imagenes" id= "yggdrasil" title="Los 9 reinos">
+        <div class="escudosYggdrasil"  id = "EscudoAsgard"  onmouseover="escribirMundo('Asgard')" onmouseout="borrarMundo('Asgard')" title="Asgard" >
+            <p id = Asgard></p>
+        </div>
+        <div class="escudosYggdrasil"  id = "EscudoVanaheim"  onmouseover="escribirMundo('Vanaheim')" onmouseout="borrarMundo('Vanaheim')" title="Vanaheim" >
+            <p id = Vanaheim></p>
+        </div>
+        <div class="escudosYggdrasil"  id = "EscudoAlfheim"  onmouseover="escribirMundo('Alfheim')" onmouseout="borrarMundo('Alfheim')" title="Alfheim" >
+            <p id = Alfheim></p>
+        </div>
+        <div class="escudosYggdrasil"  id = "EscudoMidgard"  onmouseover="escribirMundo('Midgard')" onmouseout="borrarMundo('Midgard')" title="Midgard" >
+            <p id = Midgard></p>
+        </div>
+        <div class="escudosYggdrasil"  id = "EscudoMuspelheim"  onmouseover="escribirMundo('Muspelheim')" onmouseout="borrarMundo('Muspelheim')" title="Muspelheim" >
+            <p id = Muspelheim></p>
+        </div>
+        <div class="escudosYggdrasil"  id = "EscudoNidavellir"  onmouseover="escribirMundo('Nidavellir')" onmouseout="borrarMundo('Nidavellir')" title="Nidavellir" >
+            <p id = Nidavellir></p>
+        </div>
+        <div class="escudosYggdrasil"  id = "EscudoSvartalfheim"  onmouseover="escribirMundo('Svartalfheim')" onmouseout="borrarMundo('Svartalfheim')" title="Svartalfheim" >
+            <p id = Svartalfheim></p>
+        </div>
+        <div class="escudosYggdrasil"  id = "EscudoNiflheim"  onmouseover="escribirMundo('Niflheim')" onmouseout="borrarMundo('Niflheim')" title="Niflheim" >
+            <p id = Niflheim></p>
+        </div>
+        </div>
+        <h2 class="subtitulo">Mapa de Asgard</h2>
+        <h3>A continuación se encuentra el mapa del reino de Asgard. (Entra al mapa interactivo de Asgard dandole click a la imagen)</h3>
+        <a href="MapaInteractivoAsgard.html" target="_self"><p class="imagenes2"><img src="imagenes/mapaInteractivoAsgard.jpg" width="90%" alt="Mapa de Asgard"/></p></a>
+
+
+
+
+        <p><a class="botonInicio" href="#inicio"> Volver al inicio </a></p>
+
+        <div class="pie">               <!--Se coloca el pie de pagina con los datos principales del autor con la clase pie-->
+            &copy; Luis Santiago Solano Pardo - Universidad Nacional de Colombia
+            <br>Correo <a href="mailto:lusolanop@unal.edu.co">lusolanop@unal.edu.co</a>
+            <br>Gráfica interactiva
+        </div>
+
+    </div>
+</body>
+
+</html>
