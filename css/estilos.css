@@ -327,7 +327,7 @@ h4{ 									/*Estilo de los textos de las referencias*/
 
 /*Mapa interactivo segunda parte*/
 
-.fondo2{
+#ReinoDeAsgard{
 	background-image: url("../imagenes/mapaInteractivoAsgard.jpg"); /*Imagen de fondo*/
 	background-size: 110%;
 	padding: 41% 50%;
@@ -420,7 +420,7 @@ h4{ 									/*Estilo de los textos de las referencias*/
 		padding-bottom: 122.5%;
 		max-width: 75%;
 	}
-	.fondo2{
+	#ReinoDeAsgard{
 		padding: 91% 110%;
 	}
 	#botonAumentarTamaño{
@@ -533,14 +533,59 @@ h4{ 									/*Estilo de los textos de las referencias*/
 	
 	
 }
+@media only screen and (max-device-width: 800px){
+	#ReinoDeAsgard{
+		background-size: cover;
+		padding: -10% 0%;
+		height: 400vh;		
+		width: 1000vw;
+		max-height: 100%;
+	}
+	#botonAumentarTamaño{
+		display: none;
+	}
+	#botonDisminuirTamaño{
+		display: none;
+	}
+	#bifrost{
+		padding: 50%;
+		margin-top: -90%;
+		margin-left: 440%;
+	}
+	#ManzanaIdunn{
+		padding: 45%;
+		margin-top: 570%;
+		margin-left: 355%;
+	}
+	#Valhalla{
+		padding: 45%;
+		margin-top: 480%;
+		margin-left: 440%;
+	}
+	#Palacio{
+		padding: 50%;
+		margin-top: 370%;
+		margin-left: 440%;
+	}
+	#Folkvangr{
+		padding: 45%;
+		margin-top: 570%;
+		margin-left: 660%;
+	}
+	#Franang{
+		padding: 45%;
+		margin-top: 250%;
+		margin-left: 250%;
+	}
+
+}
 
 @media only screen and (max-width : 650px ){
 	
 	h3{ /*Estilo de los parrafos*/
 	font-size: 18px;					/*Se cambia el tamaño de la fuente a 18px*/
 	line-height: 150%;     				/*Los parrafos aumentan su interlineado 50%*/
-}
+ 	}
 	
 }
-
 
