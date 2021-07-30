@@ -1,0 +1,546 @@
+@charset "UTF-8"; /*Codificación de caracteres: UTF-8*/
+
+@font-face {
+    font-family: Romanica;
+    src: url('../fonts/Romanica.ttf'); /*Fuente de los parrafos*/
+}
+@font-face {
+    font-family: VIKING-N;
+    src: url('../fonts/VIKING-N.ttf'); /*Fuente de los títulos*/
+}
+@font-face {
+    font-family: DalekPinpointBold;
+    src: url('../fonts/DalekPinpointBold.ttf'); /*Fuente de los títulos cuando el cursor se pasa por encima*/
+}
+
+/*Encabezado*/
+
+	#btn-menu {
+		display: none;   				/* Oculta el menu desplegable para las pantallas >800px*/
+	} 
+	header {
+		width: 100%;
+		z-index: 10;					/* Se coloca el menu desplegable encima de los elementos de la pagina*/
+	} 
+	header label {     				/* Se coloca el menu desplegable en la parte superior de la pagina cerca del título principal*/
+		display: none;					/* El menu desplegable no se muestra*/
+		position: absolute;				/* Se coloca el menu desplegable en una posicion exacta*/
+		left: 8%; 						/* Se separa el menu desplegable de la parte izquierda de forma relativa en porcentaje*/
+		top: 28px; 						/* Se separa el menu desplegable se separa 28px de la parte superior*/
+	} 
+	header label:hover {
+		cursor: pointer;    			/* Cuando el cursor pasa por el menu desplegable aparece una mano señalandolo*/
+	}
+	
+ 	.menu ul{							/* Se utiliza para crear una lista*/
+    justify-content: center;			/* El contenido de la lista se centra*/
+	margin: auto;						/* Margen izquierdo y derecho igual*/
+    margin: 20px 10px;					/* La margen de ariba y abajo es 20px,y la de izquierda y derecha es 10px*/
+    list-style: none;     				/* Se eliminanan las marcaciones de la lista*/
+    display: flex;  					/* La lista se coloca de forma horizontal*/
+		
+    
+}
+    .menu li{
+	background-color: rgba(33,32,35,0.67);/*Fondo del texto*/
+	text-align: center; 				/*Se alinea hacia al centro el texto de los botones*/
+    color: #666666;						/*Color de texto gris*/
+    text-decoration: none; 				/*No se subrayan los links*/
+	font-size: 20px;					/*El texto tiene una fuente de 20px*/
+	border-radius: 10px; 				/*Se redondean los bordes de los botones*/
+    border: #eeeeee solid; 				/*Borde grueso en los botones*/
+    width: 195px; 						/*Ancho de la barra de botones*/
+    height: 30px; 						/*Altura de la barra de botones*/
+	padding: 0.1em 0.2em 0.4em 0.4em;  	/* Se establece el padding de cada elemento de la lista de forma relativa usando la unidad em*/
+  
+} 
+    .menu li a {
+    display: block;						/*Se muestran los links de las paginas en una lista vertical*/
+    text-align: center;					/*El texto de la lista se centra*/
+    color: #FFFFFF;						/*El color de los links es blanco*/
+    text-decoration: none;    			/*Los links de la lista no se subrayan */
+    padding-top:6px; 					/*El padding superior es de 6px */
+     
+}
+    .menu li a:hover {
+	font-family: DalekPinpointBold; 	/*Los botones cambian su fuente de texto cuando el cursor pasa por encima*/
+	color:#EF6A09;						/*El color de la fuente de la lista es naranja*/
+	padding-top: 2px;					/*Padding superior*/				
+	padding-bottom:5px;					/*Padding inferior*/
+	cursor:pointer; 					/*El cursor cambia su forma a una mano señalando*/
+    
+}  
+
+/*Cuerpo de la pagina*/
+
+body {
+    background-color: rgba(55,49,75,0.67); /*color del fondo de la página*/
+	background-image: url("../imagenes/fondo.jpg"); /*Imagen de fondo*/
+    background-position: center; 		/*Se posicion el fondo en el centro de la página*/
+    background-blend-mode: darken; 		/*Se une el color de fondo y la imagen*/
+  	background-attachment: fixed; 		/*El fondo se vuelve estático*/
+}
+.fondo {  							/*Este  elemento coloca un color de fondo debajo del texto, pero encima del fondo principal*/
+	background-color: rgba(255,255,255,0.82);/* El color de fondo de los elementos de la pagina es blanco transparente*/
+	max-width: 95%;						/*El fondo de los elementos de la pagina ocupa el 95%*/
+    margin: auto;						/*La margen izquierda y derecha es igual*/
+}
+
+/*Texto*/
+
+a:link {
+	text-decoration: none; 				/*No se subrayan los enlaces*/
+	color:#FFFFFF;						/*El color del los links es blanco*/
+}
+a:hover {
+	color:#452005;						/*Se cambia el color de los enlaces cuando pasa el cursor por encima*/
+	cursor:pointer;						/*Cuando pasa por encima el cursor cambia su forma a una mano señalando*/
+}
+a:visited {
+	color:#000000; 						/*Se cambia el color de los enlaces cuando son visitados*/
+	text-shadow: 1px 1px #000000;		/*Los links visitados muestran una sombra oscura*/
+}
+h1 { 								/*Estilo de los títulos que se encuentran en la parte superior debajo de la barra de botones*/
+	font-family: Romanica;				/*La fuente de los titulos h1 ahora es Romanica*/
+	margin: 4% 10% 0% 10%;				/*La margen de los titulos*/
+	color: #EF6A09;						/*Los titulos son de color naranja*/
+	text-align: left; 					/*Se alinea el texto hacia la izquierda*/
+    max-width: 80%; 					/*El máximo ancho que puede alcanzar una línea de texto*/
+}
+h2 { 									/*Estilo de los subtítulos*/
+	font-family: Romanica;
+	margin-top: 100px;					/*La margen superior*/
+	margin-left: 50px;					/*La margen izquierda*/
+	color: #EF6A09;
+	text-align: left; 					/*Se alinea el texto hacia la izquierda*/    
+
+}
+h3{ 									/*Estilo de los parrafos*/
+	font-family: Romanica;
+	margin-left: 100px;					/*La margen izquierda*/
+	margin-right: 100px;				/*La margen izquierda*/
+	color: rgba(61,44,44,1.00);			/*El color de texto de los parrafos*/
+	text-align: justify; 				/*Se distribuye el texto de forma homogénea*/
+    padding-top: 10px;
+	line-height: 150%; 					/* Interlineado del texto*/
+}
+
+h4{ 									/*Estilo de los textos de las referencias*/
+	font-family: Romanica;				/*Fuente Romanica*/
+	margin-left: 100px; 				/*Margen izquierda dede el fondo de color al texto de 100px*/
+	text-align: justify;
+    max-width:90%;
+	
+}
+.textoPrincipal {						/*Estilo del título principal*/
+	font-family: VIKING-N; 				/*Fuente del título principal*/
+    background: #EB9F09; 				/*Color del fondo del titulo principal*/
+    text-align: center; 				/*Centrar texto*/
+    font-size: 50px; 					/*Fuente del título principal*/
+	margin: auto;
+	margin-top: 0px;
+	margin-left: 0px;
+    max-width: 100%; 					/*El máximo ancho que puede alcanzar una línea de texto*/
+	
+}
+.texto1 { 							/*Estilo del título que se encuentra debajo de la barra de botones en las referencias*/
+	background-color: rgba(195,143,32,1.00); /*Fondo de color para el título*/
+	text-align: center;
+	margin: auto;						/*La margen es igual a la izquierda y a la derecha*/
+	margin-top: 20px;						/*Elsubtitulo de las referencias se separa 20px */
+	padding: 10px 20%;
+	color: rgba(255,255,255,1.00);
+	
+	
+}
+
+.texto2 { 								/*Estilo de los subtítulos de referencias*/
+	font-size: 23px;
+	color: rgba(195,128,32,1.00);
+	
+}
+
+.subtitulo { 							/*Estilo de los subtítulos debajo de un título principal*/
+	font-size: 26px;
+	color: #EB5115;
+	margin-top: 2%;
+	margin-left: 8%;
+}
+
+.subtitulo2 { 							/*Estilo de los subtitulos alineados a la derecha*/
+	font-size: 24px;
+	text-align: right;					/*El texto se alinea hacia la margen derecha*/
+	color: #EB3C14;
+	margin-top: 2%;
+	margin-right: 340px;
+}
+
+.subtitulo3 { 							/*Estilo de los subtitulos alineados a la izquierda*/
+	font-size: 24px;
+	text-align: left; 					/*El texto se alinea hacia la margen izquierda*/
+	color: #EB3C14;
+	margin-left: 340px;
+}
+
+
+.botonInicio {
+
+	background-color: rgba(55,49,75,0.67); /*Fondo del boton*/
+	font-size: 20px;
+	border-radius: 10px; 				/*Bordes redondeados en los botones*/
+    border: #eeeeee solid;				/*Los bordes son oscuros*/
+    width: 195px;
+    height: 30px;
+    float: left; 						/*El boton busca ubicarse al lado izquierdo*/
+    margin: 10px 40px;
+    text-align: center; 				/*Se centra el texto de los botones*/
+	padding:5px 5px 1px 8px;  
+}
+.botonInicio:hover { 					/*Estilo del boton de "Volver al inicio" cuando se pasa el cursor por encima*/
+	background-color: rgba(207,131,6,0.05);
+	font-family: DalekPinpointBold; 	/*El boton cambia su fuente de texto cuando el cursor pasa por encima*/
+	color:#EF6A09;
+	padding-top: 2px;
+	padding-bottom:5px;
+	cursor:pointer;
+}
+
+/*Imagenes*/
+
+.imagenes {
+	position: relative;					/*Las imagenes cambian su ubicacion dependiendo de los demas elementos de la pantalla*/
+	margin-left: 30%; 					/*Tiene una margen a la izquierda del 30%*/
+}
+
+.imagenes2 {
+	position: relative;					/*Las imagenes cambian su ubicacion dependiendo de los demas elementos de la pantalla*/	
+	margin-top: 50px;					/*La margen superior es de 50px*/
+	margin-left: 8%;					/*La margen izquierda es del 8%*/
+}
+.imagenes3 {
+	position: relative;					/*Las imagenes cambian su ubicacion dependiendo de los demas elementos de la pantalla*/
+	margin-bottom: 10px;			
+}
+.imagenes4 {
+	position: relative;					/*Las imagenes cambian su ubicacion dependiendo de los demas elementos de la pantalla*/
+	margin-top: 30px;
+	margin-left: 18%; 							/*Se separa de la izquierda el porcentaje que se escoja*/
+}
+
+/*Pie de página*/
+
+.pie { /*Estilo para el pie de página*/
+	font-size: 16px;					/*La fuente del texto ahora tiene un tamaño de 16px*/
+	text-align: center;					/*El texto se centra*/
+	color: #ffffff;						/*El pie de página tiene ahora un texto de color blanco*/
+	background-color: #EB9F09; 			/*Color de fondo del texto*/
+	margin-top: 100px; 					/*Se separa el pie de página 100px en la parte superior de los textos o imágenes*/
+	padding: 5px; 						/*Se amplia el tamaño de separación del texto con los extremos del texto*/
+}
+
+/*Mapa interactivo*/
+
+#yggdrasil{
+	position: relative;
+	background-image: url("../imagenes/mapaInteractivo.png") ;
+	background-size: 100%;
+	margin-right: 30%;
+	padding-right: 5%;
+	padding-bottom: 61.3%;
+}
+
+.escudosYggdrasil{
+	position: absolute;
+	font-family: DalekPinpointBold; 	/*El boton cambia su fuente de texto cuando el cursor pasa por encima*/
+	font-size: 100%;
+	color:#ffffff;
+	cursor:pointer;	
+	background-image: url("../imagenes/IconoEscudo.png") ;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	padding: 4.5% 6%;
+}
+.escudosYggdrasil p{
+	background-color: rgba(48, 25, 25, 0.589);
+}
+
+.escudosYggdrasil:hover{
+	padding: 0%;
+}
+
+#EscudoAsgard{
+	margin-top: 25.5%;
+	margin-left: 52.8%;
+}
+
+#EscudoVanaheim{
+	margin-top: 36%;
+	margin-left: 18%;
+}
+#EscudoVanaheim:hover{
+	padding-top: 1.5% ;
+	padding-bottom: 1%;
+}
+
+#EscudoAlfheim{
+	margin-top: 50%;
+	margin-left: 75%;
+}
+
+#EscudoMidgard{
+	margin-top: 69%;
+	margin-left: 44%;
+}
+
+#EscudoMuspelheim{
+	font-size: 80%;
+	margin-top: 110%;
+	margin-left: 14%;
+}
+#EscudoMuspelheim:hover{
+	padding-top: 2.5% ;
+	padding-bottom: 3%;
+}
+
+#EscudoNidavellir{
+	margin-top: 116%;
+	margin-left: 75%;
+}
+#EscudoNidavellir:hover{
+	padding-top: 2% ;
+	padding-bottom: 3%;
+}
+
+#EscudoSvartalfheim{
+	font-size: 80%;
+	margin-top: 130%;
+	margin-left: 33%;
+}
+#EscudoSvartalfheim:hover{
+	padding-top: 3.5% ;
+	padding-bottom: 4%;
+}
+#EscudoNiflheim{
+	margin-top: 137%;
+	margin-left: 67%;
+}
+
+/*Mapa interactivo segunda parte*/
+
+.fondo2{
+	background-image: url("../imagenes/mapaInteractivoAsgard.jpg"); /*Imagen de fondo*/
+	background-size: 110%;
+	padding: 41% 50%;
+}
+#botonAumentarTamaño{
+	position:fixed;
+	background-image: url("../imagenes/iconoAumentarTamaño.png");
+	background-size: 100%;
+	padding: 2%;
+	margin-left: 1%;
+	margin-top: 1%;
+	cursor:pointer;
+	z-index: 1;
+}
+#botonDisminuirTamaño{
+	position:fixed;
+	background-image: url("../imagenes/iconoDisminuirTamaño.png");
+	background-size: 100%;
+	padding: 2%;
+	margin-left: 5%;
+	margin-top: 1%;
+	cursor:pointer;
+	z-index: 1;
+}
+#bifrost{
+	position: absolute;
+	cursor:pointer;	
+	background-image: url("../imagenes/iconoBifrost.png") ;
+	background-size: 100%;
+	padding: 3% 3%;
+	margin-top: -40%;
+	margin-left: 0.9%;
+}
+
+#ManzanaIdunn{
+	position: absolute;
+	cursor:pointer;	
+	background-image: url("../imagenes/iconoManzana.png") ;
+	background-size: 100%;
+	padding: 3.5% 3.5%;
+	margin-top: 19.3%;
+	margin-left: -7.5%;
+}
+
+#Valhalla{
+	position: absolute;
+	cursor:pointer;	
+	background-image: url("../imagenes/iconoValknut.png") ;
+	background-size: 100%;
+	padding: 3% 3.5%;
+	margin-top: 10%;
+	margin-left: 0.5%;
+}
+#Palacio{
+	position: absolute;
+	cursor:pointer;	
+	background-image: url("../imagenes/iconoOjoDeOdin.png") ;
+	background-size: 100%;
+	padding: 3.5% 3.5%;
+	margin-top: 2%;
+	margin-left: 0.45%;
+}
+#Folkvangr{
+	position: absolute;
+	cursor:pointer;	
+	background-image: url("../imagenes/iconoCasco.png") ;
+	background-size: 100%;
+	padding: 3% 3%;
+	margin-top: 20%;
+	margin-left: 20%;
+}
+#Franang{
+	position: absolute;
+	cursor:pointer;	
+	background-image: url("../imagenes/iconoCascada.png") ;
+	background-size: 100%;
+	padding: 3% 3%;
+	margin-top: -11%;
+	margin-left: -17%;
+}
+
+
+
+
+	
+
+@media only screen and (max-width : 800px ){
+	#yggdrasil{
+		margin-right: 100px;
+		padding-bottom: 122.5%;
+		max-width: 75%;
+	}
+	.fondo2{
+		padding: 91% 110%;
+	}
+	#botonAumentarTamaño{
+		padding: 4.5%;
+		margin-left: 1.5%;
+		margin-top: 1.5%;
+	}
+	#botonDisminuirTamaño{
+		padding: 4.5%;
+		margin-left: 12%;
+		margin-top: 1.5%;
+	}
+	#bifrost{
+		padding: 5.5% 6%;
+		margin-top: -90%;
+		margin-left: 2.6%;
+	}
+	#ManzanaIdunn{
+		padding: 6% 6%;
+		margin-top: 43%;
+		margin-left: -14.5%;
+	}
+	#Valhalla{
+		padding: 5% 6%;
+		margin-top: 23%;
+		margin-left: 3%;
+	}
+	#Palacio{
+		padding: 6% 6%;
+		margin-top: 3%;
+		margin-left: 2.5%;
+	}
+	#Folkvangr{
+		padding: 5% 5%;
+		margin-top: 43%;
+		margin-left: 45%;
+	}
+	#Franang{
+		padding: 5% 5%;
+		margin-top: -24%;
+		margin-left: -33%;
+	}
+
+
+	
+	.imagenes {
+		width: 160%;
+		margin-left:10%;
+		
+	}
+	.imagenes2 {
+		width: 109%;
+		margin-top: 10%;
+		margin-left:1%;					/*Las imagenes disminuyen su separacion hacia la izquierda a 1%*/
+	}
+	h1 {
+		text-align: center; 			/*Se alinea el texto hacia el centro*/
+		margin: auto;
+
+	}
+	h2 {
+		text-align: center; 			/*Se alinea el texto hacia el centro*/
+		margin: auto;		
+	}
+	.subtitulo { 						/*Subtitulo personajes*/
+		font-size: 30px; 				/*Tamaño de la fuente del texto*/
+		margin: auto;
+	}
+	.subtitulo2 { 						/*Subtitulo de los nombres de los personajes alineados a la derecha*/
+		font-size: 27px; 				/*Tamaño de la fuente del texto*/
+		text-align: left;
+		margin-left: 5%;
+	}
+	.subtitulo3 { 						/*Subtitulo de los nombres de los personajes alineados a la izquierda*/
+		font-size: 27px; 				/*Tamaño de la fuente del texto*/
+		text-align: left;
+		margin-left: 5%;
+	}
+	
+	
+	h3{ 								/*Estilo de los parrafos*/
+
+	margin-left: 2%;					/*La margen izquierda se reduce a 2%*/
+	margin-right: 2%;					/*La margen derecha se reduce a 2%*/
+	text-align: justify; 				/*Se distribuye el texto de forma homogénea*/
+	
+}
+	header label {     
+        display: block;					/* Se coloca el menu desplegable en la pantalla*/
+       
+    } 
+
+    .menu {
+        position: fixed;  				/* El menu se mantiene estatico en la pantalla */
+        background: rgba(238, 232, 232, 0.692); /* Color del fondo del menu desplegable*/
+		z-index: 15; 					/* Se coloca el menu desplegable encima de ls demas elementos de la pantalla*/
+        width: 300px; 					/* Ancho del menu */
+        margin-left: -100%; 				/* Se oculta el menu deplegable*/
+		margin-top: 4px;
+        transition: all 1s;  			/* El menu desplegable se demora 1s en aparecer en su totalidad*/
+    }
+    .menu ul {
+        flex-direction: column;  		/* Se despliega el menu de forma vertical*/
+    } 
+
+    #btn-menu:checked ~ .menu {  		/* El menu desplegable se encarga de mostrar y ocultar los enlaces a otras paginas */
+        margin: 1px; 
+    } 
+	
+	
+	
+}
+
+@media only screen and (max-width : 650px ){
+	
+	h3{ /*Estilo de los parrafos*/
+	font-size: 18px;					/*Se cambia el tamaño de la fuente a 18px*/
+	line-height: 150%;     				/*Los parrafos aumentan su interlineado 50%*/
+}
+	
+}
+
+
