@@ -7,8 +7,7 @@
     <title>Asgard: Mapa Interactivo</title>                                   <!--El título de la pestaña de la página-->
     <link href="css/estilos.css" rel="stylesheet" type="text/css">            <!--Importar los estilos CSS-->
     <link rel="icon" href="imagenes/icono.ico">                               <!--Icono de la pestaña de la página-->
-    <meta name="viewport" content="width=device-width; initial-scale=1.0">    <!--Inicia la página llenando el espacio total que pueda mostrar el dispositivo-->
-    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <!--Inicia la página llenando el espacio total que pueda mostrar el dispositivo-->
 </head>
 
 <body>
@@ -35,33 +34,43 @@
             arbol Yggdrasil y en el segundo los lugares mas importantes de Asgard.</h3>
         <h2 class="subtitulo">Los 9 reinos nordicos</h2>        
         <div class="imagenes" id= "yggdrasil" title="Los 9 reinos">
-        <div class="escudosYggdrasil"  id = "EscudoAsgard"  onmouseover="escribirMundo('Asgard')" onmouseout="borrarMundo('Asgard')" title="Asgard" >
-            <p id = Asgard></p>
-        </div>
-        <div class="escudosYggdrasil"  id = "EscudoVanaheim"  onmouseover="escribirMundo('Vanaheim')" onmouseout="borrarMundo('Vanaheim')" title="Vanaheim" >
-            <p id = Vanaheim></p>
-        </div>
-        <div class="escudosYggdrasil"  id = "EscudoAlfheim"  onmouseover="escribirMundo('Alfheim')" onmouseout="borrarMundo('Alfheim')" title="Alfheim" >
-            <p id = Alfheim></p>
-        </div>
-        <div class="escudosYggdrasil"  id = "EscudoMidgard"  onmouseover="escribirMundo('Midgard')" onmouseout="borrarMundo('Midgard')" title="Midgard" >
-            <p id = Midgard></p>
-        </div>
-        <div class="escudosYggdrasil"  id = "EscudoMuspelheim"  onmouseover="escribirMundo('Muspelheim')" onmouseout="borrarMundo('Muspelheim')" title="Muspelheim" >
-            <p id = Muspelheim></p>
-        </div>
-        <div class="escudosYggdrasil"  id = "EscudoNidavellir"  onmouseover="escribirMundo('Nidavellir')" onmouseout="borrarMundo('Nidavellir')" title="Nidavellir" >
-            <p id = Nidavellir></p>
-        </div>
-        <div class="escudosYggdrasil"  id = "EscudoSvartalfheim"  onmouseover="escribirMundo('Svartalfheim')" onmouseout="borrarMundo('Svartalfheim')" title="Svartalfheim" >
-            <p id = Svartalfheim></p>
-        </div>
-        <div class="escudosYggdrasil"  id = "EscudoNiflheim"  onmouseover="escribirMundo('Niflheim')" onmouseout="borrarMundo('Niflheim')" title="Niflheim" >
-            <p id = Niflheim></p>
-        </div>
+            <div class="escudosYggdrasil"  id = "EscudoAsgard"  onmouseover="escribirMundo('Asgard')" onmouseout="borrarMundo('Asgard')" onclick="colocarContenedorMundo('Asgard')" title="Asgard" >
+                <p id = Asgard></p>
+            </div>            
+            <div class="escudosYggdrasil"  id = "EscudoVanaheim"  onmouseover="escribirMundo('Vanaheim')" onmouseout="borrarMundo('Vanaheim')" onclick="colocarContenedorMundo('Vanaheim')" title="Vanaheim" >
+                <p id = Vanaheim></p>
+            </div>
+            <div class="escudosYggdrasil"  id = "EscudoAlfheim"  onmouseover="escribirMundo('Alfheim')" onmouseout="borrarMundo('Alfheim')" onclick="colocarContenedorMundo('Alfheim')" title="Alfheim" >
+                <p id = Alfheim></p>
+            </div>
+            <div class="escudosYggdrasil"  id = "EscudoMidgard"  onmouseover="escribirMundo('Midgard')" onmouseout="borrarMundo('Midgard')" onclick="colocarContenedorMundo('Midgard')" title="Midgard" >
+                <p id = Midgard></p>
+            </div>
+            <div class="escudosYggdrasil"  id = "EscudoJotunheim"  onmouseover="escribirMundo('Jotunheim')" onmouseout="borrarMundo('Jotunheim')" onclick="colocarContenedorMundo('Jotunheim')" title="Jotunheim" >
+                <p id = Jotunheim></p>
+            </div>
+            <div class="escudosYggdrasil"  id = "EscudoMuspelheim"  onmouseover="escribirMundo('Muspelheim')" onmouseout="borrarMundo('Muspelheim')" onclick="colocarContenedorMundo('Muspelheim')" title="Muspelheim" >
+                <p id = Muspelheim></p>
+            </div>
+            <div class="escudosYggdrasil"  id = "EscudoNidavellir"  onmouseover="escribirMundo('Nidavellir')" onmouseout="borrarMundo('Nidavellir')" onclick="colocarContenedorMundo('Nidavellir')" title="Nidavellir" >
+                <p id = Nidavellir></p>
+            </div>
+            <div class="escudosYggdrasil"  id = "EscudoSvartalfheim"  onmouseover="escribirMundo('Svartalfheim')" onmouseout="borrarMundo('Svartalfheim')" onclick="colocarContenedorMundo('Svartalfheim')" title="Svartalfheim" >
+                <p id = Svartalfheim></p>
+            </div>
+            <div class="escudosYggdrasil"  id = "EscudoNiflheim"  onmouseover="escribirMundo('Niflheim')" onmouseout="borrarMundo('Niflheim')" onclick="colocarContenedorMundo('Niflheim')" title="Niflheim" >
+                <p id = Niflheim></p>
+            </div>
+            <div id="Contenedor">
+                <span class="Cerrar" title="Cerrar" onclick="cerrarContenedor('Contenedor')">&times;</span>
+                <h1 id="TituloMundo"></h1>
+                <br>
+                <img id="ImagenMundo"class="imagenes3" width="99%">
+                <h3 id="InformacionMundo"></h3>
+            </div>
         </div>
         <h2 class="subtitulo">Mapa de Asgard</h2>
-        <h3>A continuación se encuentra el mapa del reino de Asgard. (Entra al mapa interactivo de Asgard dandole click a la imagen)</h3>
+        <h3>A continuación, se encuentra el mapa del reino de Asgard. (Entra al mapa interactivo de Asgard dando clic en la imagen)</h3>
         <a href="MapaInteractivoAsgard.html#Palacio" target="_self"><p class="imagenes2"><img src="imagenes/mapaInteractivoAsgard.jpg" width="90%" alt="Mapa de Asgard"/></p></a>
 
 
@@ -76,6 +85,7 @@
         </div>
 
     </div>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

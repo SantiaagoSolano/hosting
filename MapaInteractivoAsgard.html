@@ -7,18 +7,26 @@
     <title>Asgard: Mapa Interactivo</title>                                   <!--El título de la pestaña de la página-->
     <link href="css/estilos.css" rel="stylesheet" type="text/css">            <!--Importar los estilos CSS-->
     <link rel="icon" href="imagenes/icono.ico">                               <!--Icono de la pestaña de la página-->
-    <meta name="viewport" content="width=device-width; initial-scale=10.0">    <!--Inicia la página llenando el espacio total que pueda mostrar el dispositivo-->
-    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <!--Inicia la página llenando el espacio total que pueda mostrar el dispositivo-->
 </head>
 
-<body>
-    <div id="botonAumentarTamaño" title="Acercar" onclick="acercar()"></div>
-    <div id="botonDisminuirTamaño" title="Alejar" onclick="alejar()"></div>
-    <div id= "ReinoDeAsgard" class="fondo2" title="Reino de Asgard" onmouseout="estabilizar()" onmouseover="estabilizar()"> 
-        <div id = "bifrost" title="Bifrost"></div>   
-        <div id = "ManzanaIdunn" title="Campos de Idunn"></div>    
-        <div id = "Valhalla" title="Valhalla"></div>  
-        <div id = "Palacio" title="Palacio de Odín"></div> 
-        <div id = "Folkvangr" title="Folkvangr"></div>   
-        <div id = "Franang" title="Franang"></div>   
+<body>     
+    <div id="Contenedor2" onmouseover="estabilizar()">
+        <span class="Cerrar" title="Cerrar" onclick="cerrarContenedor('Contenedor2')">&times;</span>
+        <h1 id="TituloLugar"></h1>
+        <br>
+        <img id="ImagenLugar"class="imagenes3" width="99%">
+        <h3 id="InformacionLugar"></h3>
     </div>
+    <div id="botonAumentarTamaño" title="Acercar" onclick="acercar()" onmouseover="estabilizar()"></div>
+    <div id="botonDisminuirTamaño" title="Alejar" onclick="alejar()" onmouseover="estabilizar()"></div>
+    <div id= "ReinoDeAsgard" title="Reino de Asgard" onmouseout="estabilizar()" onmouseover="estabilizar()"> 
+        <div id = "Bifrost" title="Bifrost" onclick="colocarContenedorLugaresAsgard('Bifrost')"></div>   
+        <div id = "ManzanaIdunn" title="Campos de Idunn" onclick="colocarContenedorLugaresAsgard('ManzanaIdunn')"></div>    
+        <div id = "Valhalla" title="Valhalla" onclick="colocarContenedorLugaresAsgard('Valhalla')"></div>  
+        <div id = "Palacio" title="Palacio de Odín" onclick="colocarContenedorLugaresAsgard('Palacio')"></div> 
+        <div id = "Folkvangr" title="Folkvangr" onclick="colocarContenedorLugaresAsgard('Folkvangr')"></div>   
+        <div id = "Franang" title="Franang" onclick="colocarContenedorLugaresAsgard('Franang')"></div>                     
+    </div>    
+    <script src="js/script.js"></script>
+</body>
